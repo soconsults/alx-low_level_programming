@@ -24,7 +24,6 @@ int numLength(int num)
 
 	return (length);
 }
-
 /**
  *  *main - prints the first 98 fibonaci sequences
  *  Return: 0
@@ -49,16 +48,16 @@ int main(void)
 
 		tmp = (f1 + f2) % mx;
 		tmpo = f1o + f2o + (f1 + f2) / mx;
-	       f1 = f2;
-	       f1o = f2o;
-	       f2 = tmp;
-	       f2o = tmpo;
+		f1 = f2;
+		f1o = f2o;
+		f2 = tmp;
+		f2o = tmpo;
 
-	       if (i != 98)
+		if (i != 98)
 		       printf(", ");
-	       else
+		else
 		       printf("\n");
-	       i++;
+		i++;
 	}
 	return (0);
 }
