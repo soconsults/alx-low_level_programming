@@ -53,10 +53,10 @@ int main(void)
 		f2 = tmp;
 		f2o = tmpo;
 
-		if (i != 98)
-		       printf(", ");
-		else
-		       printf("\n");
+			if (i != 98)
+				printf(", ");
+			else
+				printf("\n");
 		i++;
 	}
 	return (0);
