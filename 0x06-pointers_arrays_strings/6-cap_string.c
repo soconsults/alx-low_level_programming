@@ -9,31 +9,23 @@
 
 char *cap_string(char *s)
 {
-	int i = 1, j, check;
+	int i = 1, j;
 
-	char a[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
+	char a[] = " \t\n,;.!?\"(){}";
 
-	if (s[0] > 96 && s[0] < 123)
-		s[0] -= 32;
-
-	while (s[i] != '\0')
+	while (*(s + i))
 	{
-		if (s[i] > 96 && s[i] < 123)
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			j = 0;
-			check = 0;
-
-			while (check == 0 && j < 13)
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
 			{
-				if (s[i - 1] == a[j])
+				for (j = 0; j <= 12; j++)
 				{
-					check = 1;
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
 				}
-				j++;
-			}
-			if (check == 1)
-			{
-				s[i] -= 32;
 			}
 		}
 		i++;
