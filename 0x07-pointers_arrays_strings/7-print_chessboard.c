@@ -6,7 +6,7 @@
  * @a: input pointer
  *
  * Return: return nothing
-*/
+ */
 
 void print_chessboard(char (*a)[8])
 {
