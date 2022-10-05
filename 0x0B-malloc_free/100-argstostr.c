@@ -15,7 +15,6 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
 	/* Counts the length of every character in the argument */
 	for (i = 0; i < ac; i++)
 	{
